@@ -53,15 +53,7 @@ namespace AdministradorCalificaciones
         }
 
         private void FrmStudentView_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyValue == (char)Keys.F3)
-            {
-                Form admin = new frmAdminLogin();
-                this.Hide();
-                this.Dispose();
-                admin.ShowDialog();
-            }
-            else if (e.KeyValue == (char)Keys.F2)
+        {if (e.KeyValue == (char)Keys.F2)
             {
                 Form profesor = new frmLogin();
                 this.Hide();
@@ -93,13 +85,7 @@ namespace AdministradorCalificaciones
 
         private void FrmTeacherView_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyValue == (char)Keys.F3)
-            {
-                Form admin = new frmAdminLogin();
-                this.Hide();
-                this.Dispose();
-                admin.ShowDialog();
-            }else if (e.KeyValue == (char)Keys.F1)
+            if (e.KeyValue == (char)Keys.F1)
             {
                 Form student = new frmStudentView();
                 this.Hide();

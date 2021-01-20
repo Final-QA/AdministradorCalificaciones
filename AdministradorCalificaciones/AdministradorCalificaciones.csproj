@@ -125,12 +125,6 @@
     <Compile Include="Estudiantes\frmIDForDataGrid_StudentView.Designer.cs">
       <DependentUpon>frmIDForDataGrid_StudentView.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAdminLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAdminLogin.Designer.cs">
-      <DependentUpon>frmAdminLogin.cs</DependentUpon>
-    </Compile>
     <Compile Include="Profesores\frmVerCalificacionesDataGrid_Profesor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,9 +207,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Estudiantes\frmListarCalificaciones.resx">
       <DependentUpon>frmListarCalificaciones.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmAdminLogin.resx">
-      <DependentUpon>frmAdminLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
