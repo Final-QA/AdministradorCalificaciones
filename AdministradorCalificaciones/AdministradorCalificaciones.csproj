@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4F0048A5-98E8-497A-97C4-1BE0D232710F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AdministradorCalificaciones</RootNamespace>
+    <AssemblyName>AdministradorCalificaciones</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Data.SqlClient, Version=2.0.20168.4, Culture=neutral, PublicKeyToken=23ec7fc2d6eaa4a5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.SqlClient.2.1.1\lib\net46\Microsoft.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client, Version=4.21.1.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Identity.Client.4.21.1\lib\net461\Microsoft.Identity.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.JsonWebTokens.6.8.0\lib\net461\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.6.8.0\lib\net461\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Protocols.6.8.0\lib\net461\Microsoft.IdentityModel.Protocols.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Protocols.OpenIdConnect.6.8.0\lib\net461\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.6.8.0\lib\net461\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.8.2\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.6.8.0\lib\net461\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\frmAgregarCarrera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\frmAgregarCarrera.Designer.cs">
+      <DependentUpon>frmAgregarCarrera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\frmAgregarMateria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\frmAgregarMateria.Designer.cs">
+      <DependentUpon>frmAgregarMateria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Gestionar Profesores\frmAgregarProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Gestionar Profesores\frmAgregarProfesor.Designer.cs">
+      <DependentUpon>frmAgregarProfesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Estudiantes\frmCalificacionesDataGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estudiantes\frmCalificacionesDataGrid.Designer.cs">
+      <DependentUpon>frmCalificacionesDataGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Gestionar Estudiantes\frmCalificarEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Gestionar Estudiantes\frmCalificarEstudiante.Designer.cs">
+      <DependentUpon>frmCalificarEstudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Estudiantes\frmListarCalificaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estudiantes\frmListarCalificaciones.Designer.cs">
+      <DependentUpon>frmListarCalificaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Gestionar Estudiantes\frmModificarEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Gestionar Estudiantes\frmModificarEstudiante.Designer.cs">
+      <DependentUpon>frmModificarEstudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Estudiantes\frmIDForDataGrid_StudentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estudiantes\frmIDForDataGrid_StudentView.Designer.cs">
+      <DependentUpon>frmIDForDataGrid_StudentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdminLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdminLogin.Designer.cs">
+      <DependentUpon>frmAdminLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profesores\frmVerCalificacionesDataGrid_Profesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profesores\frmVerCalificacionesDataGrid_Profesor.Designer.cs">
+      <DependentUpon>frmVerCalificacionesDataGrid_Profesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profesores\frmCalificarEstudiante_Profesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profesores\frmCalificarEstudiante_Profesor.Designer.cs">
+      <DependentUpon>frmCalificarEstudiante_Profesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Gestionar Estudiantes\frmRegistrarEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Gestionar Estudiantes\frmRegistrarEstudiante.Designer.cs">
+      <DependentUpon>frmRegistrarEstudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Gestionar Estudiantes\frmRegMateria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Gestionar Estudiantes\frmRegMateria.Designer.cs">
+      <DependentUpon>frmRegMateria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Gestionar Estudiantes\frmGestionarEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Gestionar Estudiantes\frmGestionarEstudiante.Designer.cs">
+      <DependentUpon>frmGestionarEstudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTeacherView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTeacherView.Designer.cs">
+      <DependentUpon>frmTeacherView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frmStudentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentView.Designer.cs">
+      <DependentUpon>frmStudentView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin\frmAgregarCarrera.resx">
+      <DependentUpon>frmAgregarCarrera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\frmAgregarMateria.resx">
+      <DependentUpon>frmAgregarMateria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Gestionar Estudiantes\frmModificarEstudiante.resx">
+      <DependentUpon>frmModificarEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Gestionar Profesores\frmAgregarProfesor.resx">
+      <DependentUpon>frmAgregarProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estudiantes\frmCalificacionesDataGrid.resx">
+      <DependentUpon>frmCalificacionesDataGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Gestionar Estudiantes\frmCalificarEstudiante.resx">
+      <DependentUpon>frmCalificarEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Gestionar Estudiantes\frmGestionarEstudiante.resx">
+      <DependentUpon>frmGestionarEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estudiantes\frmIDForDataGrid_StudentView.resx">
+      <DependentUpon>frmIDForDataGrid_StudentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estudiantes\frmListarCalificaciones.resx">
+      <DependentUpon>frmListarCalificaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdminLogin.resx">
+      <DependentUpon>frmAdminLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Gestionar Estudiantes\frmRegistrarEstudiante.resx">
+      <DependentUpon>frmRegistrarEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Gestionar Estudiantes\frmRegMateria.resx">
+      <DependentUpon>frmRegMateria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTeacherView.resx">
+      <DependentUpon>frmTeacherView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profesores\frmCalificarEstudiante_Profesor.resx">
+      <DependentUpon>frmCalificarEstudiante_Profesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profesores\frmVerCalificacionesDataGrid_Profesor.resx">
+      <DependentUpon>frmVerCalificacionesDataGrid_Profesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="frmStudentView.resx">
+      <DependentUpon>frmStudentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.2.1.1\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.2.1.1\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Data.SqlClient.SNI.2.1.1\build\net46\Microsoft.Data.SqlClient.SNI.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Data.SqlClient.SNI.2.1.1\build\net46\Microsoft.Data.SqlClient.SNI.targets'))" />
+  </Target>
+</Project>
