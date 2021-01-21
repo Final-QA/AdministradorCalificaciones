@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.seleccionarEstComboBox = new System.Windows.Forms.ComboBox();
             this.btnVerCalificaciones = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtIndice = new System.Windows.Forms.TextBox();
@@ -37,32 +36,24 @@
             this.btnEliminarEstudiante = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.btnConfirmar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 40);
+            this.label1.Location = new System.Drawing.Point(2, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(171, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Seleccione un estudiante:";
             // 
-            // seleccionarEstComboBox
-            // 
-            this.seleccionarEstComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.seleccionarEstComboBox.FormattingEnabled = true;
-            this.seleccionarEstComboBox.Location = new System.Drawing.Point(199, 36);
-            this.seleccionarEstComboBox.Name = "seleccionarEstComboBox";
-            this.seleccionarEstComboBox.Size = new System.Drawing.Size(184, 21);
-            this.seleccionarEstComboBox.TabIndex = 3;
-            this.seleccionarEstComboBox.SelectedIndexChanged += new System.EventHandler(this.SeleccionarEstComboBox_SelectedIndexChanged);
-            // 
             // btnVerCalificaciones
             // 
             this.btnVerCalificaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerCalificaciones.Location = new System.Drawing.Point(146, 152);
+            this.btnVerCalificaciones.Location = new System.Drawing.Point(146, 165);
             this.btnVerCalificaciones.Name = "btnVerCalificaciones";
             this.btnVerCalificaciones.Size = new System.Drawing.Size(115, 23);
             this.btnVerCalificaciones.TabIndex = 4;
@@ -74,7 +65,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(14, 110);
+            this.label2.Location = new System.Drawing.Point(2, 109);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 17);
             this.label2.TabIndex = 5;
@@ -82,7 +73,8 @@
             // 
             // txtIndice
             // 
-            this.txtIndice.Location = new System.Drawing.Point(199, 109);
+            this.txtIndice.Enabled = false;
+            this.txtIndice.Location = new System.Drawing.Point(170, 109);
             this.txtIndice.Name = "txtIndice";
             this.txtIndice.ReadOnly = true;
             this.txtIndice.Size = new System.Drawing.Size(91, 20);
@@ -91,7 +83,7 @@
             // btnModificarEstudiante
             // 
             this.btnModificarEstudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarEstudiante.Location = new System.Drawing.Point(17, 209);
+            this.btnModificarEstudiante.Location = new System.Drawing.Point(12, 219);
             this.btnModificarEstudiante.Name = "btnModificarEstudiante";
             this.btnModificarEstudiante.Size = new System.Drawing.Size(142, 23);
             this.btnModificarEstudiante.TabIndex = 7;
@@ -102,7 +94,7 @@
             // btnEliminarEstudiante
             // 
             this.btnEliminarEstudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarEstudiante.Location = new System.Drawing.Point(252, 209);
+            this.btnEliminarEstudiante.Location = new System.Drawing.Point(252, 219);
             this.btnEliminarEstudiante.Name = "btnEliminarEstudiante";
             this.btnEliminarEstudiante.Size = new System.Drawing.Size(142, 23);
             this.btnEliminarEstudiante.TabIndex = 8;
@@ -114,7 +106,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 74);
+            this.label3.Location = new System.Drawing.Point(2, 74);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 17);
             this.label3.TabIndex = 9;
@@ -122,18 +114,38 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(199, 74);
+            this.txtNombre.Enabled = false;
+            this.txtNombre.Location = new System.Drawing.Point(170, 74);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.ReadOnly = true;
             this.txtNombre.Size = new System.Drawing.Size(184, 20);
             this.txtNombre.TabIndex = 10;
             this.txtNombre.TextChanged += new System.EventHandler(this.TxtNombre_TextChanged);
             // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(170, 40);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(164, 20);
+            this.txtID.TabIndex = 11;
+            // 
+            // btnConfirmar
+            // 
+            this.btnConfirmar.Location = new System.Drawing.Point(340, 40);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Size = new System.Drawing.Size(75, 23);
+            this.btnConfirmar.TabIndex = 12;
+            this.btnConfirmar.Text = "Confirmar";
+            this.btnConfirmar.UseVisualStyleBackColor = true;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
+            // 
             // frmGestionarEstudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(416, 283);
+            this.Controls.Add(this.btnConfirmar);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnEliminarEstudiante);
@@ -141,7 +153,6 @@
             this.Controls.Add(this.txtIndice);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnVerCalificaciones);
-            this.Controls.Add(this.seleccionarEstComboBox);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
@@ -157,7 +168,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox seleccionarEstComboBox;
         private System.Windows.Forms.Button btnVerCalificaciones;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtIndice;
@@ -165,5 +175,7 @@
         private System.Windows.Forms.Button btnEliminarEstudiante;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.Button btnConfirmar;
     }
 }

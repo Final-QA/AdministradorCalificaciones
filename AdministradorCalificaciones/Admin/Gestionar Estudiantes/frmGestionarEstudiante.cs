@@ -13,86 +13,33 @@ namespace AdministradorCalificaciones
 {
     public partial class frmGestionarEstudiante : Form
     {
-        public static string id = "";
+        public static string Id;
         public frmGestionarEstudiante()
         {
             InitializeComponent();
-            string[] lineOfContents = File.ReadAllLines("estudianteslista.txt");
-
-            foreach (var item in lineOfContents)
-            {
-                string[] elemento = item.Split(':');
-                string id = elemento[0];
-                seleccionarEstComboBox.Items.Add(id);
-            }
-            seleccionarEstComboBox.Sorted = true;
         }
 
         private void BtnVerCalificaciones_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(seleccionarEstComboBox.Text))
+            if (string.IsNullOrWhiteSpace(txtID.Text))
             {
                 MessageBox.Show("Debe de seleccionar un estudiante");
             }
             else
             {
-                id = seleccionarEstComboBox.Text;
                 Form verificarcalificaciones = new frmCalificacionesDataGrid();
                 verificarcalificaciones.ShowDialog();
             }
         }
 
-        private void SeleccionarEstComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string id = seleccionarEstComboBox.Text;
-            double puntos_honor = 0;
-            double creditos = 0;
-            if (!File.Exists(Environment.CurrentDirectory + "\\Materias\\" + id + "materias.txt"))
-            {
-                var myfile = File.Create(Environment.CurrentDirectory + "\\Materias\\" + id + "materias.txt");
-                myfile.Close();
-
-            }
-            string[] lineas3 = File.ReadAllLines(Environment.CurrentDirectory + "\\Materias\\" + id + "materias.txt");
-
-
-            foreach (var item in lineas3)
-            {
-                    string[] elementos2 = item.Split(':');
-                    try
-                    {
-                        puntos_honor += Convert.ToDouble(elementos2[6]);
-
-                    }
-                    catch (Exception)
-                    {
-                        puntos_honor += 0;
-                        creditos -= Convert.ToDouble(elementos2[1]);
-
-                    }
-                    creditos += Convert.ToDouble(elementos2[1]);
-            }
-
-            double indice = Math.Round(puntos_honor / creditos, 2);
-            txtIndice.Text = indice.ToString();
-
-            string[] lineas2 = File.ReadAllLines(Environment.CurrentDirectory + "\\Estudiantes\\" + id + ".txt");
-            foreach (var item in lineas2)
-            {
-                string[] elementos3 = item.Split(':');
-                string nombre = elementos3[1];
-                txtNombre.Text = nombre;
-            }
-
-        }
-
+       
         private void BtnEliminarEstudiante_Click(object sender, EventArgs e)
         {
 
             bool escribir = true;
-            string id = seleccionarEstComboBox.Text;
+            string id = txtID.Text;
             int counter = 0;
-            if (string.IsNullOrWhiteSpace(seleccionarEstComboBox.Text))
+            if (string.IsNullOrWhiteSpace(id))
             {
                 MessageBox.Show("Debe de seleccionar un estudiante");
             }
@@ -141,7 +88,7 @@ namespace AdministradorCalificaciones
 
                         string print = ID + ":" + Nombre + ":" + Carrera;
 
-                        if (elementos[0] == seleccionarEstComboBox.Text)
+                        if (elementos[0] == txtID.Text)
                         {
                             counter--;
                         }
@@ -185,13 +132,13 @@ namespace AdministradorCalificaciones
 
         private void BtnModificarEstudiante_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(seleccionarEstComboBox.Text))
+            if (string.IsNullOrWhiteSpace(txtID.Text))
             {
                 MessageBox.Show("Debe de seleccionar un estudiante");
             }
             else
             {
-                id = seleccionarEstComboBox.Text;
+                Id = txtID.Text;
                 Form modificarest = new frmModificarEstudiante();
                 modificarest.ShowDialog();
                 
@@ -201,6 +148,64 @@ namespace AdministradorCalificaciones
 
         private void TxtNombre_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            string id = txtID.Text;
+            txtNombre.Text = null;
+            txtIndice.Text = null;
+            if (!File.Exists(Environment.CurrentDirectory + "\\Estudiantes\\" + id + ".txt"))
+            {
+                MessageBox.Show("El ID que ha ingresado no es valido");
+            }
+            else if (string.IsNullOrWhiteSpace(txtID.Text))
+            {
+                MessageBox.Show("Porfavor ingrese un ID");
+            }
+            else
+            {
+                Id = txtID.Text;
+                double puntos_honor = 0;
+                double creditos = 0;
+                if (!File.Exists(Environment.CurrentDirectory + "\\Materias\\" + id + "materias.txt"))
+                {
+                    var myfile = File.Create(Environment.CurrentDirectory + "\\Materias\\" + id + "materias.txt");
+                    myfile.Close();
+
+                }
+                string[] lineas3 = File.ReadAllLines(Environment.CurrentDirectory + "\\Materias\\" + id + "materias.txt");
+
+
+                foreach (var item in lineas3)
+                {
+                    string[] elementos2 = item.Split(':');
+                    try
+                    {
+                        puntos_honor += Convert.ToDouble(elementos2[6]);
+
+                    }
+                    catch (Exception)
+                    {
+                        puntos_honor += 0;
+                        creditos -= Convert.ToDouble(elementos2[1]);
+
+                    }
+                    creditos += Convert.ToDouble(elementos2[1]);
+                }
+
+                double indice = Math.Round(puntos_honor / creditos, 2);
+                txtIndice.Text = indice.ToString();
+
+                string[] lineas2 = File.ReadAllLines(Environment.CurrentDirectory + "\\Estudiantes\\" + id + ".txt");
+                foreach (var item in lineas2)
+                {
+                    string[] elementos3 = item.Split(':');
+                    string nombre = elementos3[1];
+                    txtNombre.Text = nombre;
+                }
+            }
 
         }
     }

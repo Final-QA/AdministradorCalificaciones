@@ -27,7 +27,7 @@ namespace AdministradorCalificaciones
             {
                 if (item.Name == "frmGestionarEstudiante")
                 {
-                    id = frmGestionarEstudiante.id;
+                    id = frmGestionarEstudiante.Id;
                 }
 
             }

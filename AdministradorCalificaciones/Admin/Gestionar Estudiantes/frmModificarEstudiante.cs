@@ -16,9 +16,9 @@ namespace AdministradorCalificaciones
         public frmModificarEstudiante()
         {
             InitializeComponent();
-            txtID.Text = frmGestionarEstudiante.id;
+            txtID.Text = frmGestionarEstudiante.Id;
 
-            string[] lineas2 = File.ReadAllLines(Environment.CurrentDirectory + "\\Estudiantes\\" + frmGestionarEstudiante.id + ".txt");
+            string[] lineas2 = File.ReadAllLines(Environment.CurrentDirectory + "\\Estudiantes\\" + frmGestionarEstudiante.Id + ".txt");
             foreach (var item in lineas2)
             {
                 string[] elementos3 = item.Split(':');

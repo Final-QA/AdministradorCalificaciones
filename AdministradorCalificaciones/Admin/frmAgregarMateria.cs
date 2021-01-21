@@ -129,7 +129,7 @@ namespace AdministradorCalificaciones
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-
+            
             lbl_Nombre.Visible = false;
             lbl_Carrera.Visible = false;
             seleccionarMateriacomboBox.Enabled = false;
