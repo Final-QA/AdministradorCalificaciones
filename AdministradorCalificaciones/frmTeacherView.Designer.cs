@@ -44,18 +44,19 @@
             // txtTituloPrincipal
             // 
             this.txtTituloPrincipal.AutoSize = true;
-            this.txtTituloPrincipal.Font = new System.Drawing.Font("Times New Roman", 30F);
-            this.txtTituloPrincipal.Location = new System.Drawing.Point(5, 9);
+            this.txtTituloPrincipal.Font = new System.Drawing.Font("Times New Roman", 24F);
+            this.txtTituloPrincipal.Location = new System.Drawing.Point(12, 23);
             this.txtTituloPrincipal.Name = "txtTituloPrincipal";
-            this.txtTituloPrincipal.Size = new System.Drawing.Size(474, 46);
+            this.txtTituloPrincipal.Size = new System.Drawing.Size(377, 36);
             this.txtTituloPrincipal.TabIndex = 2;
             this.txtTituloPrincipal.Text = "Manejador de Calificaciones";
             // 
             // btnVerCalificaciones
             // 
-            this.btnVerCalificaciones.Location = new System.Drawing.Point(324, 152);
+            this.btnVerCalificaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerCalificaciones.Location = new System.Drawing.Point(199, 264);
             this.btnVerCalificaciones.Name = "btnVerCalificaciones";
-            this.btnVerCalificaciones.Size = new System.Drawing.Size(120, 41);
+            this.btnVerCalificaciones.Size = new System.Drawing.Size(143, 41);
             this.btnVerCalificaciones.TabIndex = 7;
             this.btnVerCalificaciones.Text = "Ver Materias";
             this.btnVerCalificaciones.UseVisualStyleBackColor = true;
@@ -63,9 +64,10 @@
             // 
             // btnListarCalificaciones
             // 
-            this.btnListarCalificaciones.Location = new System.Drawing.Point(324, 199);
+            this.btnListarCalificaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListarCalificaciones.Location = new System.Drawing.Point(199, 199);
             this.btnListarCalificaciones.Name = "btnListarCalificaciones";
-            this.btnListarCalificaciones.Size = new System.Drawing.Size(120, 41);
+            this.btnListarCalificaciones.Size = new System.Drawing.Size(143, 41);
             this.btnListarCalificaciones.TabIndex = 8;
             this.btnListarCalificaciones.Text = "Ver Ranking";
             this.btnListarCalificaciones.UseVisualStyleBackColor = true;
@@ -73,9 +75,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(324, 58);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(10, 199);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 41);
+            this.button1.Size = new System.Drawing.Size(143, 41);
             this.button1.TabIndex = 9;
             this.button1.Text = "Ver Calificaciones";
             this.button1.UseVisualStyleBackColor = true;
@@ -84,24 +87,26 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 86);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(15, 87);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
+            this.label1.Size = new System.Drawing.Size(58, 17);
             this.label1.TabIndex = 10;
             this.label1.Text = "Nombre";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 180);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(18, 130);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 13);
+            this.label2.Size = new System.Drawing.Size(55, 17);
             this.label2.TabIndex = 11;
             this.label2.Text = "Materia";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(62, 86);
+            this.txtNombre.Location = new System.Drawing.Point(169, 87);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.ReadOnly = true;
             this.txtNombre.Size = new System.Drawing.Size(173, 20);
@@ -109,7 +114,7 @@
             // 
             // txtMateria
             // 
-            this.txtMateria.Location = new System.Drawing.Point(62, 173);
+            this.txtMateria.Location = new System.Drawing.Point(169, 130);
             this.txtMateria.Name = "txtMateria";
             this.txtMateria.ReadOnly = true;
             this.txtMateria.Size = new System.Drawing.Size(173, 20);
@@ -117,9 +122,10 @@
             // 
             // btnCalificarEstudiante
             // 
-            this.btnCalificarEstudiante.Location = new System.Drawing.Point(324, 105);
+            this.btnCalificarEstudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalificarEstudiante.Location = new System.Drawing.Point(12, 264);
             this.btnCalificarEstudiante.Name = "btnCalificarEstudiante";
-            this.btnCalificarEstudiante.Size = new System.Drawing.Size(120, 41);
+            this.btnCalificarEstudiante.Size = new System.Drawing.Size(143, 41);
             this.btnCalificarEstudiante.TabIndex = 14;
             this.btnCalificarEstudiante.Text = "Calificar Estudiante";
             this.btnCalificarEstudiante.UseVisualStyleBackColor = true;
@@ -128,16 +134,17 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 238);
+            this.label3.Location = new System.Drawing.Point(33, 351);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 13);
             this.label3.TabIndex = 15;
             this.label3.Text = "F1(Student View)";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(118, 238);
+            this.label4.Location = new System.Drawing.Point(237, 351);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 13);
             this.label4.TabIndex = 16;
@@ -147,7 +154,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(485, 260);
+            this.ClientSize = new System.Drawing.Size(396, 373);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnCalificarEstudiante);

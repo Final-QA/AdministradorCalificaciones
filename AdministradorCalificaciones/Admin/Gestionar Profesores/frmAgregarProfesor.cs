@@ -178,5 +178,9 @@ namespace AdministradorCalificaciones
 
         }
 
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -40,38 +40,41 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 40);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(2, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 13);
+            this.label1.Size = new System.Drawing.Size(151, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Nonbre de la carrera: ";
+            this.label1.Text = "Nombre de la carrera: ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 86);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(2, 75);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(46, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Siglas";
             // 
             // txtNombreCarrera
             // 
-            this.txtNombreCarrera.Location = new System.Drawing.Point(147, 37);
+            this.txtNombreCarrera.Location = new System.Drawing.Point(156, 37);
             this.txtNombreCarrera.Name = "txtNombreCarrera";
-            this.txtNombreCarrera.Size = new System.Drawing.Size(264, 20);
+            this.txtNombreCarrera.Size = new System.Drawing.Size(204, 20);
             this.txtNombreCarrera.TabIndex = 2;
             // 
             // txtSiglasCarrera
             // 
-            this.txtSiglasCarrera.Location = new System.Drawing.Point(121, 86);
+            this.txtSiglasCarrera.Location = new System.Drawing.Point(156, 72);
             this.txtSiglasCarrera.Name = "txtSiglasCarrera";
             this.txtSiglasCarrera.Size = new System.Drawing.Size(100, 20);
             this.txtSiglasCarrera.TabIndex = 3;
             // 
             // btnAgregarCarrera
             // 
-            this.btnAgregarCarrera.Location = new System.Drawing.Point(147, 225);
+            this.btnAgregarCarrera.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarCarrera.Location = new System.Drawing.Point(156, 160);
             this.btnAgregarCarrera.Name = "btnAgregarCarrera";
             this.btnAgregarCarrera.Size = new System.Drawing.Size(133, 27);
             this.btnAgregarCarrera.TabIndex = 4;
@@ -82,9 +85,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(40, 144);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(2, 113);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(29, 13);
+            this.label4.Size = new System.Drawing.Size(38, 17);
             this.label4.TabIndex = 11;
             this.label4.Text = "Area";
             // 
@@ -97,16 +101,16 @@
             "Ciencias Sociales y Humanidades",
             "Ciencias Basicas y Ambientales",
             "Ingenierias"});
-            this.seleccionarAreacomboBox1.Location = new System.Drawing.Point(87, 141);
+            this.seleccionarAreacomboBox1.Location = new System.Drawing.Point(156, 112);
             this.seleccionarAreacomboBox1.Name = "seleccionarAreacomboBox1";
-            this.seleccionarAreacomboBox1.Size = new System.Drawing.Size(175, 21);
+            this.seleccionarAreacomboBox1.Size = new System.Drawing.Size(204, 21);
             this.seleccionarAreacomboBox1.TabIndex = 12;
             // 
             // frmAgregarCarrera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(439, 283);
+            this.ClientSize = new System.Drawing.Size(382, 230);
             this.Controls.Add(this.seleccionarAreacomboBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnAgregarCarrera);

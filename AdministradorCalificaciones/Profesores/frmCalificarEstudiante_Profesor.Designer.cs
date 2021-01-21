@@ -38,44 +38,49 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(28, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 13);
+            this.label1.Size = new System.Drawing.Size(143, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Estudiante a calificar:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 117);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(28, 114);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 13);
+            this.label2.Size = new System.Drawing.Size(83, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Calificacion:";
             // 
             // seleccionarEstComboBox1
             // 
             this.seleccionarEstComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.seleccionarEstComboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.seleccionarEstComboBox1.FormattingEnabled = true;
             this.seleccionarEstComboBox1.Location = new System.Drawing.Point(31, 61);
             this.seleccionarEstComboBox1.Name = "seleccionarEstComboBox1";
-            this.seleccionarEstComboBox1.Size = new System.Drawing.Size(162, 21);
+            this.seleccionarEstComboBox1.Size = new System.Drawing.Size(162, 24);
             this.seleccionarEstComboBox1.TabIndex = 2;
             this.seleccionarEstComboBox1.SelectedIndexChanged += new System.EventHandler(this.SeleccionarEstComboBox1_SelectedIndexChanged);
             // 
             // txtCalificacion
             // 
             this.txtCalificacion.Enabled = false;
-            this.txtCalificacion.Location = new System.Drawing.Point(98, 114);
+            this.txtCalificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCalificacion.Location = new System.Drawing.Point(31, 145);
             this.txtCalificacion.Name = "txtCalificacion";
-            this.txtCalificacion.Size = new System.Drawing.Size(175, 20);
+            this.txtCalificacion.Size = new System.Drawing.Size(88, 23);
             this.txtCalificacion.TabIndex = 7;
             // 
             // btnCalificar
             // 
-            this.btnCalificar.Location = new System.Drawing.Point(98, 194);
+            this.btnCalificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalificar.Location = new System.Drawing.Point(57, 196);
             this.btnCalificar.Name = "btnCalificar";
-            this.btnCalificar.Size = new System.Drawing.Size(75, 23);
+            this.btnCalificar.Size = new System.Drawing.Size(136, 39);
             this.btnCalificar.TabIndex = 8;
             this.btnCalificar.Text = "Calificar";
             this.btnCalificar.UseVisualStyleBackColor = true;
@@ -85,7 +90,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(281, 241);
+            this.ClientSize = new System.Drawing.Size(251, 265);
             this.Controls.Add(this.btnCalificar);
             this.Controls.Add(this.txtCalificacion);
             this.Controls.Add(this.seleccionarEstComboBox1);

@@ -42,9 +42,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 43);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 13);
+            this.label1.Size = new System.Drawing.Size(171, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Seleccione un estudiante:";
             // 
@@ -52,15 +53,16 @@
             // 
             this.seleccionarEstComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.seleccionarEstComboBox.FormattingEnabled = true;
-            this.seleccionarEstComboBox.Location = new System.Drawing.Point(162, 40);
+            this.seleccionarEstComboBox.Location = new System.Drawing.Point(199, 36);
             this.seleccionarEstComboBox.Name = "seleccionarEstComboBox";
-            this.seleccionarEstComboBox.Size = new System.Drawing.Size(190, 21);
+            this.seleccionarEstComboBox.Size = new System.Drawing.Size(184, 21);
             this.seleccionarEstComboBox.TabIndex = 3;
             this.seleccionarEstComboBox.SelectedIndexChanged += new System.EventHandler(this.SeleccionarEstComboBox_SelectedIndexChanged);
             // 
             // btnVerCalificaciones
             // 
-            this.btnVerCalificaciones.Location = new System.Drawing.Point(27, 169);
+            this.btnVerCalificaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerCalificaciones.Location = new System.Drawing.Point(146, 152);
             this.btnVerCalificaciones.Name = "btnVerCalificaciones";
             this.btnVerCalificaciones.Size = new System.Drawing.Size(115, 23);
             this.btnVerCalificaciones.TabIndex = 4;
@@ -71,23 +73,25 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 113);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(14, 110);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 13);
+            this.label2.Size = new System.Drawing.Size(49, 17);
             this.label2.TabIndex = 5;
             this.label2.Text = "Indice:";
             // 
             // txtIndice
             // 
-            this.txtIndice.Location = new System.Drawing.Point(69, 110);
+            this.txtIndice.Location = new System.Drawing.Point(199, 109);
             this.txtIndice.Name = "txtIndice";
             this.txtIndice.ReadOnly = true;
-            this.txtIndice.Size = new System.Drawing.Size(100, 20);
+            this.txtIndice.Size = new System.Drawing.Size(91, 20);
             this.txtIndice.TabIndex = 6;
             // 
             // btnModificarEstudiante
             // 
-            this.btnModificarEstudiante.Location = new System.Drawing.Point(45, 220);
+            this.btnModificarEstudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarEstudiante.Location = new System.Drawing.Point(17, 209);
             this.btnModificarEstudiante.Name = "btnModificarEstudiante";
             this.btnModificarEstudiante.Size = new System.Drawing.Size(142, 23);
             this.btnModificarEstudiante.TabIndex = 7;
@@ -97,7 +101,8 @@
             // 
             // btnEliminarEstudiante
             // 
-            this.btnEliminarEstudiante.Location = new System.Drawing.Point(224, 220);
+            this.btnEliminarEstudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarEstudiante.Location = new System.Drawing.Point(252, 209);
             this.btnEliminarEstudiante.Name = "btnEliminarEstudiante";
             this.btnEliminarEstudiante.Size = new System.Drawing.Size(142, 23);
             this.btnEliminarEstudiante.TabIndex = 8;
@@ -108,18 +113,19 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 77);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 74);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
+            this.label3.Size = new System.Drawing.Size(62, 17);
             this.label3.TabIndex = 9;
             this.label3.Text = "Nombre:";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(77, 74);
+            this.txtNombre.Location = new System.Drawing.Point(199, 74);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.ReadOnly = true;
-            this.txtNombre.Size = new System.Drawing.Size(150, 20);
+            this.txtNombre.Size = new System.Drawing.Size(184, 20);
             this.txtNombre.TabIndex = 10;
             this.txtNombre.TextChanged += new System.EventHandler(this.TxtNombre_TextChanged);
             // 

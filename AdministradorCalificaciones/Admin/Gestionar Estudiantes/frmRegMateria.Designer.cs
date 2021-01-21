@@ -42,16 +42,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(29, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 13);
+            this.label1.Size = new System.Drawing.Size(144, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre de la materia";
             this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // txtNombreAsignatura
             // 
-            this.txtNombreAsignatura.Location = new System.Drawing.Point(181, 38);
+            this.txtNombreAsignatura.Location = new System.Drawing.Point(219, 38);
             this.txtNombreAsignatura.Name = "txtNombreAsignatura";
             this.txtNombreAsignatura.Size = new System.Drawing.Size(165, 20);
             this.txtNombreAsignatura.TabIndex = 0;
@@ -59,17 +60,19 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 80);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(29, 80);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 13);
+            this.label2.Size = new System.Drawing.Size(138, 17);
             this.label2.TabIndex = 4;
             this.label2.Text = "Cantidad de creditos";
             // 
             // btnRegistrarAsignatura
             // 
-            this.btnRegistrarAsignatura.Location = new System.Drawing.Point(119, 240);
+            this.btnRegistrarAsignatura.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrarAsignatura.Location = new System.Drawing.Point(114, 214);
             this.btnRegistrarAsignatura.Name = "btnRegistrarAsignatura";
-            this.btnRegistrarAsignatura.Size = new System.Drawing.Size(128, 23);
+            this.btnRegistrarAsignatura.Size = new System.Drawing.Size(173, 50);
             this.btnRegistrarAsignatura.TabIndex = 4;
             this.btnRegistrarAsignatura.Text = "Registrar asignatura";
             this.btnRegistrarAsignatura.UseVisualStyleBackColor = true;
@@ -84,9 +87,9 @@
             "Ciencias Sociales y Humanidades",
             "Ciencias Basicas y Ambientales",
             "Ingenierias"});
-            this.seleccionarAreacomboBox1.Location = new System.Drawing.Point(170, 122);
+            this.seleccionarAreacomboBox1.Location = new System.Drawing.Point(219, 122);
             this.seleccionarAreacomboBox1.Name = "seleccionarAreacomboBox1";
-            this.seleccionarAreacomboBox1.Size = new System.Drawing.Size(175, 21);
+            this.seleccionarAreacomboBox1.Size = new System.Drawing.Size(165, 21);
             this.seleccionarAreacomboBox1.TabIndex = 2;
             this.seleccionarAreacomboBox1.SelectedIndexChanged += new System.EventHandler(this.SeleccionarAreacomboBox1_SelectedIndexChanged);
             // 
@@ -95,26 +98,28 @@
             this.seleccionarCarreracomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.seleccionarCarreracomboBox.Enabled = false;
             this.seleccionarCarreracomboBox.FormattingEnabled = true;
-            this.seleccionarCarreracomboBox.Location = new System.Drawing.Point(170, 159);
+            this.seleccionarCarreracomboBox.Location = new System.Drawing.Point(219, 163);
             this.seleccionarCarreracomboBox.Name = "seleccionarCarreracomboBox";
-            this.seleccionarCarreracomboBox.Size = new System.Drawing.Size(186, 21);
+            this.seleccionarCarreracomboBox.Size = new System.Drawing.Size(165, 21);
             this.seleccionarCarreracomboBox.TabIndex = 3;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(49, 125);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(29, 122);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(29, 13);
+            this.label4.Size = new System.Drawing.Size(38, 17);
             this.label4.TabIndex = 10;
             this.label4.Text = "Area";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(49, 167);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(29, 163);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 13);
+            this.label3.Size = new System.Drawing.Size(56, 17);
             this.label3.TabIndex = 11;
             this.label3.Text = "Carrera";
             // 
@@ -128,7 +133,7 @@
             "3",
             "4",
             "5"});
-            this.txtCantidadCreditos.Location = new System.Drawing.Point(181, 80);
+            this.txtCantidadCreditos.Location = new System.Drawing.Point(219, 79);
             this.txtCantidadCreditos.Name = "txtCantidadCreditos";
             this.txtCantidadCreditos.Size = new System.Drawing.Size(165, 21);
             this.txtCantidadCreditos.TabIndex = 1;

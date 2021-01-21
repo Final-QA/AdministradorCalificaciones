@@ -40,27 +40,30 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 22);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(8, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 13);
+            this.label1.Size = new System.Drawing.Size(171, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Seleccione un estudiante:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(27, 118);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 88);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 13);
+            this.label3.Size = new System.Drawing.Size(59, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Materia:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 179);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(12, 165);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 13);
+            this.label4.Size = new System.Drawing.Size(83, 17);
             this.label4.TabIndex = 3;
             this.label4.Text = "Calificación:";
             // 
@@ -68,17 +71,18 @@
             // 
             this.seleccionarEstComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.seleccionarEstComboBox1.FormattingEnabled = true;
-            this.seleccionarEstComboBox1.Location = new System.Drawing.Point(30, 57);
+            this.seleccionarEstComboBox1.Location = new System.Drawing.Point(78, 43);
             this.seleccionarEstComboBox1.Name = "seleccionarEstComboBox1";
-            this.seleccionarEstComboBox1.Size = new System.Drawing.Size(162, 21);
+            this.seleccionarEstComboBox1.Size = new System.Drawing.Size(143, 21);
             this.seleccionarEstComboBox1.TabIndex = 0;
             this.seleccionarEstComboBox1.SelectedIndexChanged += new System.EventHandler(this.seleccionarEstComboBox1_SelectedIndexChanged);
             // 
             // btnCalificar
             // 
-            this.btnCalificar.Location = new System.Drawing.Point(135, 285);
+            this.btnCalificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalificar.Location = new System.Drawing.Point(78, 263);
             this.btnCalificar.Name = "btnCalificar";
-            this.btnCalificar.Size = new System.Drawing.Size(75, 23);
+            this.btnCalificar.Size = new System.Drawing.Size(143, 38);
             this.btnCalificar.TabIndex = 3;
             this.btnCalificar.Text = "Calificar";
             this.btnCalificar.UseVisualStyleBackColor = true;
@@ -91,23 +95,23 @@
             this.seleccionarAsigComboBox.FormattingEnabled = true;
             this.seleccionarAsigComboBox.Location = new System.Drawing.Point(78, 118);
             this.seleccionarAsigComboBox.Name = "seleccionarAsigComboBox";
-            this.seleccionarAsigComboBox.Size = new System.Drawing.Size(142, 21);
+            this.seleccionarAsigComboBox.Size = new System.Drawing.Size(143, 21);
             this.seleccionarAsigComboBox.TabIndex = 4;
             this.seleccionarAsigComboBox.SelectedIndexChanged += new System.EventHandler(this.SeleccionarAsigComboBox_SelectedIndexChanged);
             // 
             // txtCalificacion
             // 
             this.txtCalificacion.Enabled = false;
-            this.txtCalificacion.Location = new System.Drawing.Point(78, 176);
+            this.txtCalificacion.Location = new System.Drawing.Point(78, 204);
             this.txtCalificacion.Name = "txtCalificacion";
-            this.txtCalificacion.Size = new System.Drawing.Size(175, 20);
+            this.txtCalificacion.Size = new System.Drawing.Size(143, 20);
             this.txtCalificacion.TabIndex = 6;
             // 
             // frmCalificarEstudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(349, 351);
+            this.ClientSize = new System.Drawing.Size(295, 351);
             this.Controls.Add(this.txtCalificacion);
             this.Controls.Add(this.seleccionarAsigComboBox);
             this.Controls.Add(this.btnCalificar);
