@@ -1,2 +1,3 @@
 Programacion:4:ProfeEjemplo:90:A:4:16
 Prueba:4:Prueba Materia Prueba:80:B:3:12
+Prueba 2:3:Prueba 2:70:C:2:6

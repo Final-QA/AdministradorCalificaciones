@@ -195,18 +195,16 @@ namespace AdministradorCalificaciones
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
+            lbl_Nombre.Visible = false;
+            lbl_Carrera.Visible = false;
+            seleccionarAsigComboBox.Enabled = false;
+            seleccionarAsigComboBox.Items.Clear();
+            Id = null;
 
             string id = txtID.Text;
             if (!File.Exists(Environment.CurrentDirectory + "\\Estudiantes\\" + id + ".txt"))
             {
-                lbl_Nombre.Visible = false;
-                lbl_Carrera.Visible = false;
-                seleccionarAsigComboBox.Enabled = false;
-                seleccionarAsigComboBox.Items.Clear();
-                Id = null;
-
-                MessageBox.Show("El ID que ha ingresado no es valido");
-                
+                MessageBox.Show("El ID que ha ingresado no es valido"); 
             }
             else if (string.IsNullOrWhiteSpace(txtID.Text))
             {
