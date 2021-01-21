@@ -70,7 +70,6 @@ namespace AdministradorCalificaciones
                         carrera = elementos[1];
                         materia = elementos[2];
                         this.Hide();
-                        this.Dispose();
                         Form profesorview = new frmTeacherView();
                         profesorview.ShowDialog();
 

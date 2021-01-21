@@ -73,7 +73,6 @@ namespace AdministradorCalificaciones
 
             Form verCalificaciones = new frmVerCalificacionesDataGrid_Profesor();
             verCalificaciones.ShowDialog();
-
             
         }
 

@@ -27,30 +27,34 @@ namespace AdministradorCalificaciones
                 string[] archivo = nombre_archivo.Split('m');
                 string ID = archivo[0];
 
+                string[] estudiante = File.ReadAllLines(file);
 
-                string estudiante = File.ReadAllText(file);
-
-                string[] elementos = estudiante.Split(':');
-                if (nombreProfesor == elementos[2] && materia == elementos[0])
+                foreach(var line in estudiante)
                 {
-
-                    string Archivo_est = File.ReadAllText(Environment.CurrentDirectory + "\\Estudiantes\\" + ID + ".txt");
-                    string[] elementos_est = Archivo_est.Split(':');
-                    string nombre_est = elementos_est[1];
-                    try
-                    {
-                        int calificacion = Convert.ToInt32(elementos[3]);
-                        string cal_alpha = elementos[4];
-                        string print = ID + ":" + nombre_est + ":" + calificacion + ":" + cal_alpha;
-                        dataGridView1.Rows.Add(print.Split(':'));
-                        dataGridView1.Rows[counter].Cells[2].Value = Convert.ToInt32(calificacion);
-                    }
-                    catch (Exception)
+                    string[] elementos = line.Split(':');
+                    if (nombreProfesor == elementos[2] && materia == elementos[0])
                     {
 
+                        string Archivo_est = File.ReadAllText(Environment.CurrentDirectory + "\\Estudiantes\\" + ID + ".txt");
+                        string[] elementos_est = Archivo_est.Split(':');
+                        string nombre_est = elementos_est[1];
+                        try
+                        {
+                            int calificacion = Convert.ToInt32(elementos[3]);
+                            string cal_alpha = elementos[4];
+                            string print = ID + ":" + nombre_est + ":" + calificacion + ":" + cal_alpha;
+                            dataGridView1.Rows.Add(print.Split(':'));
+                            dataGridView1.Rows[counter].Cells[2].Value = Convert.ToInt32(calificacion);
+                        }
+                        catch (Exception)
+                        {
 
+
+                        }
                     }
+
                 }
+                
 
 
             }

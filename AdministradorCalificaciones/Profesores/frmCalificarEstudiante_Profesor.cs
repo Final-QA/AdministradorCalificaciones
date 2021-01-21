@@ -16,6 +16,8 @@ namespace AdministradorCalificaciones
         public frmCalificarEstudiante_Profesor()
         {
             InitializeComponent();
+
+
             string nombreProfesor = frmLogin.nombre;
             string materia = frmLogin.materia;
 
@@ -27,21 +29,25 @@ namespace AdministradorCalificaciones
                 string ID = archivo[0];
 
 
-                string estudiante = File.ReadAllText(file);
+                string[] estudiante = File.ReadAllLines(file);
 
-                string[] elementos = estudiante.Split(':');
-                if (nombreProfesor == elementos[2] && materia == elementos[0])
+                foreach(var line in estudiante)
                 {
-                    seleccionarEstComboBox1.Items.Add(ID);
+                    string[] elementos = line.Split(':');
+                    if (nombreProfesor == elementos[2] && materia == elementos[0])
+                    {
+                        seleccionarEstComboBox1.Items.Add(ID);
 
+                    }
                 }
 
 
             }
+
             if (seleccionarEstComboBox1.Items.Count == 0)
             {
                 MessageBox.Show("No hay estudiantes registrados en esta materia");
-                this.Close();
+                this.Hide();
             }
 
 
