@@ -15,61 +15,17 @@ namespace AdministradorCalificaciones
 {
     public partial class frmCalificarEstudiante : Form
     {
+
+        public string Id;
         public frmCalificarEstudiante()
         {
             InitializeComponent();
 
             //Buscar los estudiantes de la lista
-
-
-            string[] lineOfContents = File.ReadAllLines("estudianteslista.txt");
-
-            foreach (var item in lineOfContents)
-            {
-                string[] elemento = item.Split(':');
-                string id = elemento[0];
-
-                seleccionarEstComboBox1.Items.Add(id);
-
-            }
         }
 
 
-        private void seleccionarEstComboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            seleccionarAsigComboBox.Items.Clear();
-            txtCalificacion.Enabled = false;
-            string estudiante = seleccionarEstComboBox1.Text;
-            if (!File.Exists(Environment.CurrentDirectory + "\\Materias\\" + estudiante + "materias.txt"))
-            {
-                MessageBox.Show("Debe de agregar una materia antes de poder calificar a un estudiante");
-                this.Close();
-            }
-            else
-            {
-                string[] Asignaturas = File.ReadAllLines(Environment.CurrentDirectory + "\\Materias\\" + estudiante + "materias.txt");
-
-                foreach (var item in Asignaturas)
-                {
-                    string[] elemento = item.Split(':');
-                    string asignatura = elemento[0];
-                    if (!seleccionarAsigComboBox.Items.Contains(asignatura))
-                    {
-                        seleccionarAsigComboBox.Items.Add(asignatura);
-                    }
-                }
-
-                if (!string.IsNullOrEmpty(seleccionarEstComboBox1.Text))
-                {
-                    seleccionarAsigComboBox.Enabled = true;
-                }
-                else
-                {
-                    seleccionarAsigComboBox.Enabled = false;
-                }
-            }
-
-        }
+    
 
         private void btnCalificar_Click(object sender, EventArgs e)
         {
@@ -98,7 +54,7 @@ namespace AdministradorCalificaciones
             {
 
                 //Calcular las notas
-                string estudiante = seleccionarEstComboBox1.Text;
+                string estudiante = Id;
                 string[] Asignaturas = File.ReadAllLines(Environment.CurrentDirectory + "\\Materias\\" + estudiante + "materias.txt");
 
                 bool escribir = true;
@@ -229,7 +185,6 @@ namespace AdministradorCalificaciones
 
         private void SeleccionarAsigComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string estudiante = seleccionarEstComboBox1.Text;
             if (!string.IsNullOrEmpty(seleccionarAsigComboBox.Text))
             {
                
@@ -238,6 +193,77 @@ namespace AdministradorCalificaciones
             
         }
 
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
 
+            string id = txtID.Text;
+            if (!File.Exists(Environment.CurrentDirectory + "\\Estudiantes\\" + id + ".txt"))
+            {
+                lbl_Nombre.Visible = false;
+                lbl_Carrera.Visible = false;
+                seleccionarAsigComboBox.Enabled = false;
+                seleccionarAsigComboBox.Items.Clear();
+                Id = null;
+
+                MessageBox.Show("El ID que ha ingresado no es valido");
+                
+            }
+            else if (string.IsNullOrWhiteSpace(txtID.Text))
+            {
+                MessageBox.Show("Porfavor ingrese un ID");
+            }
+            else if (!txtID.Text.All(char.IsDigit))
+            {
+                MessageBox.Show("Porfavor ingrese un ID valido");
+            }
+            else
+            {
+                if (!File.Exists("estudianteslista.txt"))
+                {
+                    var myfile = File.Create("estudianteslista.txt");
+                    myfile.Close();
+                }
+
+                string lineOfContents = File.ReadAllText("estudianteslista.txt");
+                if (string.IsNullOrWhiteSpace(lineOfContents))
+                {
+                    MessageBox.Show("No hay estudiantes registrados");
+                }
+                else
+                {
+                    string[] estudiante = File.ReadAllLines(Environment.CurrentDirectory + "\\Estudiantes\\" + id + ".txt");
+                    string[] Asignaturas = File.ReadAllLines(Environment.CurrentDirectory + "\\Materias\\" + id + "materias.txt");
+
+
+                    string nombre = estudiante[0].Split(':')[1];
+                    string carrera = estudiante[0].Split(':')[2];
+
+
+                    lbl_Carrera.Text = carrera;
+                    lbl_Nombre.Text = nombre;
+
+                    lbl_Nombre.Visible = true;
+                    lbl_Carrera.Visible = true;
+
+                    foreach (var item in Asignaturas)
+                    {
+                        string[] elemento = item.Split(':');
+                        string asignatura = elemento[0];
+                        if (!seleccionarAsigComboBox.Items.Contains(asignatura))
+                        {
+                            seleccionarAsigComboBox.Items.Add(asignatura);
+                        }
+                    }
+
+                    Id = id;
+
+                    seleccionarAsigComboBox.Enabled = true;
+
+                }
+
+
+            }
+
+        }
     }
 }
